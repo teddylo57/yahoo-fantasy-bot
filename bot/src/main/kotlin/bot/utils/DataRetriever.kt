@@ -68,11 +68,11 @@ object DataRetriever {
 
     private fun grabData(url: String): Document {
         refreshExpiredToken()
-        println("Grabbing Data...")
+//        println("Grabbing Data...")
         val request = OAuthRequest(Verb.GET, url)
         oauthService.signRequest(currentToken?.second, request)
         val response = oauthService.execute(request)
-        println("Data grabbed.")
+//        println("Data grabbed.")
         return Jsoup.parse(response.body, "", Parser.xmlParser())
     }
 
