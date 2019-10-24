@@ -27,7 +27,7 @@ object Arbiter {
     }
 
     fun start() {
-        Observable.interval(0, 15, TimeUnit.SECONDS)
+        Observable.interval(0, 7, TimeUnit.SECONDS)
             .subscribe {
                 try {
                     val event = DataRetriever.getTransactions()
